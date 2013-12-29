@@ -1,0 +1,15 @@
+<h4>
+	<span class="updating"><i class="icon-refresh icon-white"></i></span>
+	<img src="http://graph.facebook.com/{{id}}/picture" />
+	<a class="notifications"></a>
+	{{name}}
+</h4>
+<div class="popover">
+	<ul>
+		<div class="notifications"></div>
+		<li><a onclick="LIB.update()"><i class="icon-refresh"></i> {{L 'update'}}</a></li>
+		<li class="nightMode"><a onclick="LIB.nightMode(true)"><i class="icon-adjust"></i> {{L 'nightMode'}}</a></li>
+		<li class="dayMode"><a onclick="LIB.nightMode()"><i class="icon-adjust"></i> {{L 'dayMode'}}</a></li>
+		<li><a onclick="LIB.logout()"><i class="icon-off"></i> {{L 'logout'}}</a></li>
+	</ul>
+</div>

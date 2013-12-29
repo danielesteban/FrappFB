@@ -1,0 +1,37 @@
+<div class="post">
+	<a href="https://facebook.com/{{from.id}}" target="_blank"><img class="user" src="http://graph.facebook.com/{{from.id}}/picture" /></a>
+	<div class="data">
+		<h5><a href="https://facebook.com/{{from.id}}" target="_blank">{{from.name}}</a></h5>
+		{{#if message}}<p class="message">{{message}}</p>{{/if}}
+		{{#if description}}<p class="description">{{#if name}}<strong>{{name}}</strong><br>{{/if}}{{description}}</p>{{/if}}
+		{{#if soundcloud}}
+			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="//w.soundcloud.com/player/?url={{link}}"></iframe>
+		{{else}}
+			{{#if youtube}}
+				<iframe class="youtube" width="100%" scrolling="no" frameborder="no" src="//www.youtube.com/embed/{{youtube}}?modestbranding=1&amp;iv_load_policy=3&amp;rel=0&amp;hd=1&amp;html5=1"></iframe>
+			{{else}}
+				{{#if picture}}
+					<p>{{#if link}}<a href="{{link}}" target="_blank">{{/if}}<img class="picture" src="{{picture}}" />{{#if link}}</a>{{/if}}</p>
+				{{else}}
+					{{#if link}}<p><a href="{{link}}" target="_blank">{{link}}</p>{{/if}}
+				{{/if}}
+			{{/if}}
+		{{/if}}
+		{{#if comments}}
+		<ul class="comments">
+			{{#each comments.data}}
+				<li><a href="https://facebook.com/{{from.id}}" target="_blank">{{from.name}}</a>: {{message}}</li>
+			{{/each}}
+		</ul>
+		{{/if}}
+		{{#if actions}}
+		<p class="actions">
+			<small>
+				{{#each actions}}
+					<b> · </b><a href="{{link}}" target="_blank">{{L name}}</a>
+				{{/each}}
+			</small>
+		</p>
+		{{/if}}
+	</div>
+</div>

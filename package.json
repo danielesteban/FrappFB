@@ -1,0 +1,17 @@
+{
+	"name" : "FrappFB",
+	"version" : "1.0.0",
+	"author" : "Daniel Esteban Nombela <dani@hellacoders.com>",
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/danielesteban/FrappFB.git"
+	},
+	"modules" : [
+		"jquery",
+		"handlebars",
+		"lang",
+		"less"
+	],
+	"icon" : "img/icon.png",
+	"main" : "index.html"
+}

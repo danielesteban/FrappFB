@@ -1,0 +1,44 @@
+.boxShadow(@val) {
+	-webkit-box-shadow: @val;
+	-moz-box-shadow: @val;
+	box-shadow: @val;
+}
+
+.borderRadius(@val: 4px) {
+	-moz-border-radius: @val;
+	-webkit-border-radius: @val;
+	border-radius: @val;
+}
+
+.ellipsis() {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.transition(@val) {
+	-webkit-transition: @val;
+	-moz-transition: @val;
+	-o-transition: @val;
+	transition: @val;
+}
+
+.transition(@val1, @val2) {
+	-webkit-transition: @val1, @val2;
+	-moz-transition: @val1, @val2;
+	-o-transition: @val1, @val2;
+	transition: @val1, @val2;
+}
+
+.backgroundGradient(@startColor, @middleColor, @endColor) {
+	background: @startColor; /* Old browsers */
+	background: -moz-linear-gradient(top, @startColor 0%, @middleColor 41%, @endColor 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(41%, @middleColor), color-stop(100%, @endColor)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @startColor 0%, @middleColor 41%, @endColor 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @startColor 0%, @middleColor 41%, @endColor 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @startColor 0%, @middleColor 41%, @endColor 100%); /* IE10+ */
+	background: linear-gradient(to bottom, @startColor 0%, @middleColor 41%, @endColor 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=~`"'@{startColor}'"`, endColorstr=~`"'@{endColor}'"`, GradientType=0 ); /* IE6-9 */
+}
