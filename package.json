@@ -1,6 +1,7 @@
 {
 	"name" : "FrappFB",
 	"version" : "1.0.0",
+	"description" : "A minimalistic ad-free facebook client.",
 	"author" : "Daniel Esteban Nombela <dani@hellacoders.com>",
 	"repository" : {
 		"type" : "git",
